@@ -1,11 +1,13 @@
-document.getElementById("mobile").addEventListener("click", showMobileMenu);
+ 
+const navSlide = () => {
+    const bg_menu = document.querySelector('.mobile');
+    const nav = document.querySelector('.nav_menu');
 
-function showMobileMenu(){
-    var pageLinks = document.getElementById("links");
-    if(pageLinks.style.display==="none"){
-        pageLinks.style.display = "block"
-    }
-    else{
-        pageLinks.style.display = "none";
-    }
-}
+    bg_menu.addEventListener('click', () =>{
+        nav.classList.toggle('slide_menu');
+
+        //x animation on menu
+        bg_menu.classList.toggle('changeIcon');
+    });
+}  
+navSlide();
